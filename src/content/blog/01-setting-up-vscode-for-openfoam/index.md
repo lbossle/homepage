@@ -1,6 +1,6 @@
 ---
-title: "Setting up VS Code for OpenFOAM development"
-description: "How I setup VS Code to develop in OpenFOAM: IntelliSense and more."
+title: "Setting up VS Code for OpenFOAM Development"
+description: "How to set up VS Code to develop for OpenFOAM: IntelliSense and more."
 date: "2024-12-24"
 draft: false
 ---
@@ -43,7 +43,7 @@ Now we can start setting up VS code for our needs.
     sudo apt install bear
     ```
 
-    Now you can compile your code with `bear -- <your_build_command>` which will generate the needed `compile_commands.json` database. Now clangd should automatically provide links to definition and IntelliSense.
+    Now you can compile your code with `bear -- <your_build_command>` which will generate the needed `compile_commands.json` database. After a few seconds clangd should automatically provide links to definition and IntelliSense.
 
 ---
 
