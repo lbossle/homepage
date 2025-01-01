@@ -49,4 +49,4 @@ sudo apt install jq
 ```
 
 As the JWT expires after a few hours both commands need to be executed to create a backup.
-These commands can easily be put into a cronjob and now you can automatically update Portainer.
+These commands can easily be put into a cronjob and now you can automatically backup Portainer.
