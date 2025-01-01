@@ -1,5 +1,5 @@
 ---
-title: "Automatically Update Portainer"
+title: "Automatically Backup Portainer"
 description: "Securely backup the Portainer configuration."
 date: "2025-01-01"
 draft: false
