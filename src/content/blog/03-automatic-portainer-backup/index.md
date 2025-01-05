@@ -16,28 +16,28 @@ One container I have not backed up so far is Portainer. This is because I though
 
 #### Backup Portainer
 
-The first thing one can do is to go to the Portainer settings in the web UI and scroll to the backup section. There you can create and directly download a full backup. The only caveat is that, unless you are using the business plan, you can not schedule a backup.
+The first thing you can do is to go to the Portainer settings in the web UI and scroll to the backup section. There you can create and directly download a full backup. The only caveat is that, unless you are using the business plan, you can not schedule a backup.
 
 ![Backup Portainer via web UI](/blog-3/backup-portainer-web-ui.png)
 
-But there is a workaround, the [API](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.21.5). For this a JWT is required.
+But there is a workaround, the [Portainer API](https://app.swaggerhub.com/apis/portainer/portainer-ce/2.21.5). For this a JWT is required.
 So in total we are going to need two API requests.
 
 
 Firstly, to get the JWT and write it to a file called `.jwt` we run:
 
 ```bash
-wget https://your_domain/api/auth
---post-data='{"username": "your_username", "password": "your_password"}'
+wget https://your_domain/api/auth \
+--post-data '{"username": "your_username", "password": "your_password"}' \
 -O .jwt
 ```
 
 And then to create and download the backup:
 
 ```bash
-wget https://your_domain/api/backup
---header="Authorization: Bearer $(cat .jwt | jq -r .jwt)"
---post-data'{"password": ""}'
+wget https://your_domain/api/backup \
+--header "Authorization: Bearer $(cat .jwt | jq -r .jwt)" \
+--post-data '{"password": ""}' \
 -O portainer_backup.tar.gz
 ```
 
