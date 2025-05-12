@@ -2,7 +2,7 @@
 title: "Create a Custom Wifi QR-Code"
 description: "Create your own sticker with a wifi QR-code."
 date: "2025-01-19"
-draft: false
+draft: true
 ---
 
 To make it easier for friends to access your home wifi network it can
