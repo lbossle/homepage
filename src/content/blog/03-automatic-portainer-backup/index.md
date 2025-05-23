@@ -5,18 +5,18 @@ date: "2025-01-01"
 draft: false
 ---
 
-It is always a good practise to backup stuff. This is especially the case when running a custom
-homelab server. Sometimes things just go wrong and it is geat to be able to restore something
+It is always a good practise to backup stuff. This is especially the case when running a
+homelab server. Sometimes things just go wrong and it is great to be able to restore
 to a previous state. For most of my Docker applications this is quite staightforward.
 Every night a script is executed which creates a backup of the files and database. The backups are handeled by restic which takes care of deduplication and managing the history of snapshots.
 
 #### Why Backup Portainer?
 
-One container I have not backed up so far is Portainer. This is because I thought that it does not really hold andy valuable data and is just used to manage my already backed up containers. But this is not entirly correct. It does hold the docker-compose setup of all containers and a lot of evironment variables which I don't want to lose. So Portainer should also be backed up.
+One container I have not backed up so far is Portainer. This is because I thought that it does not really hold any valuable data and is just used to manage my already backed up containers. But this is not entirly correct. It does hold the docker-compose setup of all containers and a lot of evironment variables which I don't want to lose. So Portainer should also be backed up.
 
 #### Backup Portainer
 
-The first thing you can do is to go to the Portainer settings in the web UI and scroll to the backup section. There you can create and directly download a full backup. The only caveat is that, unless you are using the business plan, you can not schedule a backup.
+The first thing you can do is to go to the Portainer settings in the web UI and scroll to the backup section. There you can create and directly download a full backup. The only caveat is that, unless you are using the business plan, you cannot schedule a backup.
 
 ![Backup Portainer via web UI](/blog-3/backup-portainer-web-ui.png)
 
